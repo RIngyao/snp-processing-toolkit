@@ -34,3 +34,37 @@ The structure of directories and files are shown below:
 
 
 ```
+
+## Workflow
+
+Workflow diagram is shown below along with the software and file format.
+
+
+```text
+
+      Raw data		  | 
+         ↓		  | FASTQ
+   Quality control	  |
+(fastqc,fastp, multiqc)	  |
+         ↓			
+      Mapping		  |
+     (bwa mem)		  |
+         ↓		  | SAM/BAM
+   MarkDuplicates	  |
+   (GATK, Picard)	  |
+         ↓			  
+  HaplotypeCaller	  |
+      (GATK)		  |
+         ↓		  | GVCF
+   CombineGVCFs		  |
+      (GATK)		  |
+         ↓			  
+   GenotypeGVCFs	  |
+      (GATK)		  |
+         ↓		  | VCF
+     Filtering		  |
+    (bcftools)		  |
+         ↓
+     Analysis		  | CSV,TSV..
+
+```
