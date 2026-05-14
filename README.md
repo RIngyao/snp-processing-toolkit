@@ -10,7 +10,7 @@ It may be particularly useful for users who are new to handling large-scale file
 This workflow is intended as a learning and reference resource. Users are encouraged to understand each analysis step and adapt parameters according to their own data, organism, and study design rather than copying and running the workflow directly.
 
 
-## Organisation of directory and file
+# Organisation of directory and file
 
 The structure of directories and files are shown below:
 
@@ -41,7 +41,7 @@ The structure of directories and files are shown below:
 
 ```
 
-## Workflow
+# Workflow
 
 Workflow diagram is shown below along with the software and file format.
 
@@ -76,7 +76,7 @@ Workflow diagram is shown below along with the software and file format.
 ```
 
 
-## NOTE
+# NOTE
 
 1. Users should set the appropriate ploidy level for their organism or study design. Ploidy is defined during `HaplotypeCaller` and is carried forward into `GenotypeGVCFs`.
 
