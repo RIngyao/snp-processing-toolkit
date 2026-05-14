@@ -23,7 +23,6 @@ The structure of directories and files are shown below:
 │   └── variant_call/
 │       └── combined_gvcf/
 ├── logs/
-├── README.md
 └── scripts/
     ├── script_check_qc.sh
     ├── script_combine_gvcf.sh
