@@ -9,17 +9,21 @@ It will be particularly useful for users who are new to handling large-scale fil
 The structure of directories and files are shown below:
 
 ```text
+
 .
 ├── analysis/
 ├── data/
-│   ├── deduplicate/
-│   ├── list_of_samples.txt
-│   ├── mapped/
-│   ├── quality/
-│   ├── raw/
-│   ├── reference/
-│   └── trimmed/
+│   ├── deduplicate/
+│   ├── list_of_samples.txt
+│   ├── mapped/
+│   ├── quality/
+│   ├── raw/
+│   ├── reference/
+│   ├── trimmed/
+│   └── variant_call/
+│       └── combined_gvcf/
 ├── logs/
+├── README.md
 └── scripts/
     ├── script_check_qc.sh
     ├── script_combine_gvcf.sh
@@ -28,4 +32,6 @@ The structure of directories and files are shown below:
     ├── script_mapping.sh
     ├── script_mark_duplicates.sh
     └── script_quality_control.sh
+
+
 ```
