@@ -42,29 +42,29 @@ Workflow diagram is shown below along with the software and file format.
 
 ```text
 
-      Raw data			  | 
-         ↓			  | FASTQ
-   Quality control		  |
+      Raw data			      | 
+         ↓			          | FASTQ
+   Quality control		      |
 (fastqc,fastp, multiqc)		  |
          ↓			
-      Mapping			  |
-     (bwa mem)			  |
-         ↓			  | SAM/BAM
-   MarkDuplicates		  |
-   (GATK, Picard)		  |
+      Mapping			      |
+     (bwa mem)			      |
+         ↓			          | SAM/BAM
+   MarkDuplicates		      |
+   (GATK, Picard)	    	  |
          ↓			  
-  HaplotypeCaller		  |
-      (GATK)			  |
-         ↓			  | GVCF
-   CombineGVCFs			  |
-      (GATK)			  |
+  HaplotypeCaller	    	  |
+      (GATK)		    	  |
+         ↓			          | GVCF
+   CombineGVCFs    			  |
+      (GATK)	    		  |
          ↓			  
-   GenotypeGVCFs		  |
-      (GATK)			  |
-         ↓			  | VCF
-     Filtering			  |
-    (bcftools)			  |
+   GenotypeGVCFs    		  |
+      (GATK)	    		  |
+         ↓		        	  | VCF
+     Filtering    			  |
+    (bcftools)	    		  |
          ↓
-     Analysis			  | CSV,TSV..
+     Analysis	    		  | CSV,TSV..
 
 ```
