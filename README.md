@@ -17,21 +17,35 @@ The structure of directories and files are shown below:
 ```text
 
 .
-├── analysis/
-├── data/
-│   ├── deduplicate/
+├── analysis
+├── data
+│   ├── annotation
+│   │   └── snpEff
+│   │       ├── data
+│   │       │   └── species
+│   │       │       ├── cds.fa
+│   │       │       ├── genes.gff
+│   │       │       ├── protein.fa
+│   │       │       └── sequence.fa
+│   │       └── snpEff.config
+│   ├── deduplicate
 │   ├── list_of_samples.txt
-│   ├── mapped/
-│   ├── quality/
-│   ├── raw/
-│   ├── reference/
-│   ├── trimmed/
-│   └── variant_call/
-│       └── combined_gvcf/
-├── logs/
-└── scripts/
+│   ├── mapped
+│   ├── quality
+│   ├── raw
+│   ├── reference
+│   ├── trimmed
+│   └── variant_call
+│       ├── combined_gvcf
+│       └── filtered
+├── logs
+├── README.md
+└── scripts
+    ├── script_annotation_snpeff.sh
     ├── script_check_qc.sh
     ├── script_combine_gvcf.sh
+    ├── script_filter_1st.sh
+    ├── script_filter_2nd.sh
     ├── script_genotypeCall.sh
     ├── script_haplotype_call.sh
     ├── script_mapping.sh
@@ -67,9 +81,12 @@ Workflow diagram is shown below along with the software and file format.
          ↓			  
    GenotypeGVCFs    		  |
       (GATK)	    		  |
-         ↓		        	  | VCF
+         ↓		        	  |
      Filtering    			  |
-    (bcftools)	    		  |
+    (bcftools)	    		  | VCF
+         ↓                    |
+      Annotate                |
+      (snpEff)	    		  |
          ↓
      Analysis	    		  | CSV,TSV..
 
