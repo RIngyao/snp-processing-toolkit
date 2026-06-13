@@ -13,7 +13,7 @@ command -v snpEff >/dev/null 2>&1 || {
 
 
 # ================================================
-# Variables rquire for processin
+# Variables rquire for processing
 export IDIR="data/variant_call/filtered"		# input dir
 export ODIR="data/annotation"                		# output directory path 
 export CONFIG="${ODIR}/snpEff/snpEff.config"		# snpEff config file
